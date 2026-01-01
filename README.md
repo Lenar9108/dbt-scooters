@@ -1,15 +1,47 @@
-Welcome to your new dbt project!
+# dbt_scooters
 
-### Using the starter project
+`dbt_scooters` — проект на базе dbt, предназначенный для управления и трансформации данных,
+связанных с использованием скутеров кикшеринга.
+Позволяет выстроить аналитику данных о передвижениях и использовании скутеров.
 
-Try running the following commands:
-- dbt run
-- dbt test
+## Стек
+- **dbt**
+- **Python**
+- **uv** — управление виртуальным окружением и зависимостями
+- DWH — зависит от настроек профиля dbt
 
+## Конфигурация
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+Обновите конфигурационный файл `~/.dbt/profiles.yml` с вашими данными доступа к базе данных.
+
+## Установка и запуск
+
+### Инициализация окружения
+```bash
+uv venv
+source .venv/bin/activate
+uv pip install -r requirements.txt
+Проверка подключения
+dbt debug
+Базовые команды dbt (шпаргалка)
+Запуск моделей
+dbt run
+Запуск конкретной модели
+dbt run --select model_name
+Запуск моделей и тестов
+dbt build
+Запуск тестов
+dbt test
+Просмотр DAG и документации
+dbt docs generate
+dbt docs serve
+Компиляция SQL без выполнения
+dbt compile
+Структура проекта (кратко)
+models/ — dbt-модели
+seeds/ — статические данные
+tests/ — кастомные тесты
+macros/ — макросы
+dbt_project.yml — конфигурация проекта
+
+Примечание: если виртуальное окружение не активно, используйте `uv run dbt `.
