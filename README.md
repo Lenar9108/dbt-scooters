@@ -45,3 +45,9 @@ macros/ — макросы
 dbt_project.yml — конфигурация проекта
 
 Примечание: если виртуальное окружение не активно, используйте `uv run dbt `.
+
+Активируйте PostGIS в базе PostgreSQL, если еще этого не делали:
+
+```sql
+create extension postgis schema public;
+```
