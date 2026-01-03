@@ -43,4 +43,5 @@ models:
       materialized: "incremental"
   - name: "events_clean"
     description: "User events without duplicates"
-    
+    config:
+      materialized: "incremental"
