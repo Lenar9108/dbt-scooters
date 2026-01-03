@@ -1,17 +1,5 @@
 select
-t.id
-,t.user_id
-,t.scooter_hw_id
-,t.started_at
-,t.finished_at
-,t.start_lat
-,t.start_lon
-,t.finish_lat
-,t.finish_lon
-,t.distance_m
-,t.price_rub
-,t.duration_s
-,t.is_free
+t.*
 ,u.sex
 ,extract(year from t.started_at) - extract(year from u.birth_date) as age
 from
