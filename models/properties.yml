@@ -65,3 +65,5 @@ models:
     description: "User events enriched with meaningful types"
     config:
       materialized: "view"
+  - name: "events_stat"
+    description: "Overall user events statistics"
