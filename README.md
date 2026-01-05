@@ -51,3 +51,7 @@ dbt_project.yml — конфигурация проекта
 ```sql
 create extension postgis schema public;
 ```
+## Полезные макросы
+
+- `dbt run-operation create_role --args "name: finance"` - создание роли в базе (на примере роли "finance")
+- `dbt run-operation create_postgis` - активация расширения PostGIS для расчета географических моделей
