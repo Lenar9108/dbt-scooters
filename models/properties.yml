@@ -77,6 +77,11 @@ models:
     description: "Scooter satistics by company"   
   - name: "companies_trips"
     description: "Trip satistics by company"
+    columns:
+      - name: "company"
+        description: "Scooters manufacturing company"
+        data_tests:
+          - unique
   - name: "events_full"
     description: "User events enriched with meaningful types"
     config:
