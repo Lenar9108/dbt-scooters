@@ -1,0 +1,8 @@
+# sources:
+#   - name: "scooters_raw"
+#     tables:
+#       - name: "users"
+#         columns:
+#           - name: "sex"
+#             data_tests:
+#               - "column_not_null"
