@@ -15,8 +15,6 @@ sources:
           error_after:
             count: 3650
             period: "day"
-
-        
       - name: "users"
         description: "Users of scooter service"
         columns:
